@@ -1,11 +1,11 @@
-import Home from "./pages/Home";
+import { RouterProvider } from "react-router-dom";
+import "./styles/global.scss"
+import Routers from "./react-routes/Routers.tsx";
 
 const App = () => {
     return (
-        <div>
-            App
-            <Home />
-        </div>
+        <RouterProvider router={Routers}/>
+           
     );
 };
 
