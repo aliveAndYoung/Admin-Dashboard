@@ -4,6 +4,7 @@ import Products from "../pages/products/Products";
 import Users from "../pages/users/Users";
 import Layout from "../components/layout/Layout";
 import Login from "../pages/login/Login";
+import Product from "../pages/product/Product";
 
 const Routers = createBrowserRouter([
     {
@@ -15,18 +16,22 @@ const Routers = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "products",
+                path: "/products",
                 element: <Products />,
             },
             {
-                path: "users",
+                path: "/users",
                 element: <Users />,
+            },
+            {
+                path: "/products/:id",
+                element: <Product />,
             },
         ],
     },
     {
-        path:'login' ,
-        element : <Login/>
-    }
+        path: "/login",
+        element: <Login />,
+    },
 ]);
 export default Routers;
